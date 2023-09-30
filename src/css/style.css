@@ -79,7 +79,7 @@ main .painel-info .logo {
 
 .btns .btn {
     border: none;
-    background: none;
+    background: black;
     cursor: pointer;
     border-radius: 50%;
     -webkit-border-radius: 50%;
