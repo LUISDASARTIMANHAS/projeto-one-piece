@@ -1,5 +1,6 @@
 const urlGetDados = "https://pingobras-sg.glitch.me/projetos/one-piece";
 const mainElements = document.querySelector(".personagens")
+const mainBtnsElements = document.querySelector(".btns")
 
 function getData() {
     const options = {
@@ -39,16 +40,21 @@ function loader(database) {
     for (let i = 0; i < database.length; i++) {
         const dataPersonagem = database[i];
         const nomePersonagem = dataPersonagem.personagem
+        const nomeTripulacao = dataPersonagem.tripulacao
         const imgPersonagem = dataPersonagem.imagem
+        const imgTripulacao = dataPersonagem.tripulacaoImg
         const infoPersonagem = dataPersonagem.descricao
 
 
         const personagemElement = document.createElement("div");
+        const liBtnElement = document.createElement("li");
         const imgElement = document.createElement("img");
+        const imgElementBtn = document.createElement("img");
         const painelInfoElement = document.createElement("div");
         const logoElement = document.createElement("i");
         const h2Element = document.createElement("h2");
         const pElement = document.createElement("p");
+        const btnElement = document.createElement("button");
 
         // configurações da imagem
         imgElement.classList.add("img");
@@ -76,5 +82,24 @@ function loader(database) {
         personagemElement.appendChild(painelInfoElement)
 
         mainElements.appendChild(personagemElement);
+
+        // configurações da imagem do botão
+        imgElementBtn.src = imgTripulacao
+        imgElementBtn.alt = nomeTripulacao
+
+        // configurações do botão
+        if(nomeTripulacao == "Tripulação Luffy"){
+            btnElement.classList.add("select")
+        }
+        btnElement.classList.add("btn")
+        btnElement.appendChild(imgElementBtn)
+
+        // configurações do agrupador de botões
+        liBtnElement.appendChild(btnElement)
+        mainBtnsElements.appendChild(liBtnElement)
     }
 }
+
+        <button class="btn">
+          <img src="./src/img/tripulacao-chopper.png" alt="Tripulação Chopper">
+        </button>
