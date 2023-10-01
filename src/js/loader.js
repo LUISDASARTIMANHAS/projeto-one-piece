@@ -68,6 +68,10 @@ function loader(database) {
         painelInfoElement.appendChild(h2Element)
         painelInfoElement.appendChild(pElement)
 
+        if(nomePersonagem == "Monkey D Luffy"){
+            personagemElement.classList.add("select")
+        }
+        personagemElement.classList.add("person")
         personagemElement.appendChild(imgElement)
         personagemElement.appendChild(painelInfoElement)
 
