@@ -84,7 +84,7 @@ function loader(database) {
         mainElements.appendChild(personagemElement);
 
         // configurações da imagem do botão
-        imgElementBtn.src = imgTripulacao
+        imgElementBtn.src = "./src/img/" + imgTripulacao
         imgElementBtn.alt = nomeTripulacao
 
         // configurações do botão
@@ -99,7 +99,3 @@ function loader(database) {
         mainBtnsElements.appendChild(liBtnElement)
     }
 }
-
-        <button class="btn">
-          <img src="./src/img/tripulacao-chopper.png" alt="Tripulação Chopper">
-        </button>
