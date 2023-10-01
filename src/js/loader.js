@@ -1,4 +1,4 @@
-const path = "projetos/one-piece=personagens";
+const path = "projetos/one-piece";
 const urlGetDados = "https://pingobras-sg.glitch.me/" + path;
 
 function getData() {
@@ -35,6 +35,6 @@ function erro(error) {
     alert(error)
 }
 
-function loader(){
+function loader(database){
 
 }
