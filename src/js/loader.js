@@ -1,4 +1,4 @@
-const urlGetDados = "https://pingobras-sg.glitch.me/projetos/one-piece";
+const urlGetDados = "https://pingobras-sg.glitch.me/api/projetos/one-piece";
 const mainElements = document.querySelector(".personagens")
 const mainBtnsElements = document.querySelector(".btns")
 
